@@ -1,1 +1,38 @@
+#include <stdio.h>
 
+int main() {
+    // Estrutura da carta
+    char codigo[10];
+    char cidade[50];
+    int populacao;
+    float area;
+    float pib;
+
+    // Entrada de dados
+    printf("=== Cadastro de Carta - Super Trunfo ===\n");
+
+    printf("Digite o codigo da carta: ");
+    scanf("%s", codigo);
+
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]", cidade); // lê string com espaços
+
+    printf("Digite a populacao: ");
+    scanf("%d", &populacao);
+
+    printf("Digite a area (km²): ");
+    scanf("%f", &area);
+
+    printf("Digite o PIB (em bilhões): ");
+    scanf("%f", &pib);
+
+    // Saída de dados
+    printf("\n=== Carta Cadastrada ===\n");
+    printf("Codigo: %s\n", codigo);
+    printf("Cidade: %s\n", cidade);
+    printf("Populacao: %d habitantes\n", populacao);
+    printf("Area: %.2f km²\n", area);
+    printf("PIB: %.2f bilhões\n", pib);
+
+    return 0;
+}
